@@ -1,4 +1,4 @@
-##Exercism.io JavaScript Exercises
+## Exercism.io JavaScript Exercises
 **Project Details**
 Working through daily exercises on the Exercism app to practice JavaScript.
 
