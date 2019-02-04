@@ -1,4 +1,5 @@
 export const toRna = nucleotide => {
+  const decode = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'};
   let n = nucleotide.toUpperCase().split("");
   let output = [];
   let check = 0;
@@ -15,10 +16,7 @@ export const toRna = nucleotide => {
   if (check === 0) {
     for (let i in n) {
       if (n[i] === "G" || n[i] === "C" || n[i] === "T" || n[i] === "A") {
-        if (n[i] === "G") output.push("C");
-        if (n[i] === "C") output.push("G");
-        if (n[i] === "T") output.push("A");
-        if (n[i] === "A") output.push("U");
+        output.push(decode[n[i]]);
       } else {
         throw new Error("Invalid input DNA.");
       }
